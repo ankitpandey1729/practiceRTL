@@ -6,23 +6,21 @@ import userEvent from '@testing-library/user-event';
 let container;
 describe('testing mycounter component.',() => {
     beforeEach(() => {
-        console.log("before each.")
+        //console.log("before each.")
         container = render(<MyCounter />);
       });
       
       afterEach(() => {
-        console.log("after each.")
+        //console.log("after each.")
         container = null;
       });
       
       beforeAll(() => {
-        
-        console.log("before all test case done. run once.")
+        //console.log("before all test case done. run once.")
       });
       
       afterAll(() => {
-        //
-        console.log("after all test case done. run once.")
+        //console.log("after all test case done. run once.")
       });
       
       test('initial count is zero', () => {

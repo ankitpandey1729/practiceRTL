@@ -46,14 +46,14 @@ test('updates state on textarea change', () => {
 
 test('updates state on select change', () => {
   render(<MyForm />);
-
+  //screen.debug();
   // Trigger select change
-  fireEvent.change(screen.getByText(/Select an option/), {
+  fireEvent.change(screen.getByRole('combobox'), {
     target: { value: 'option1' },
   });
-
+  //screen.debug();
   // Check if state is updated
-  expect(screen.getByText(/Select an option/).value).toBe('option1');
+  expect(screen.getByRole('combobox').value).toBe('option1');
 });
 
 test('updates state on checkbox change', () => {
